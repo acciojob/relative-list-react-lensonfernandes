@@ -1,15 +1,18 @@
 import React from 'react'
 
 const App = () => {
+  const fam = [
+    {id: "relativeListItem2", name: 'Lee'},
+    {id: "relativeListItem1", name: 'Jack'},
+    {id: "relativeListItem3", name: 'Sparrow'}
+  ];
+
   return (
     <div id="main">
                {/* Do not remove the main div */}
-               <ol key="relativeList">
-                  <li key="relativeListItem1">lee</li>
-                  <li key="relativeListItem2">Jack</li>
-                  <li key="relativeListItem3">Sparrow</li>
-
-               </ol>
+               <ol>
+        {fam.map((ele) => <li key={ele.id}>{ele.name}</li>)}
+      </ol>
     </div>
   )
 }
